@@ -40,13 +40,3 @@ node_modules/
 *.dSYM
 *.stackdump
 
-## EECS 280 Specific
-*.exe
-
-## EECS 281 Specific
-fullsubmit.tar.gz
-partialsubmit.tar.gz
-ungraded.tar.gz
-*_debug
-*_profile
-
