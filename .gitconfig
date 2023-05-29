@@ -1,0 +1,56 @@
+[alias]
+    forget = update-index --assume-unchanged
+    unforget = update-index --no-assume-unchanged
+    forgotten = ! git ls-files -v | grep ^[a-z]
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[mergetool]
+    prompt = false
+
+[init]
+    defaultBranch = master
+
+[core]
+    autocrlf = input
+    excludesFile = ~/.gitignore_global
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    plus-emph-style = "syntax #006000"
+    minus-style = "syntax #340001"
+    file-style = bold yellow
+    file-decoration-style = ol ul
+    line-numbers-left-style = white
+    line-numbers-right-style = white
+    line-numbers-left-format = "{np:^4}│ "
+    line-numbers-right-format = " {np:^4}│ "
+    line-numbers-zero-style = "#777777"
+    line-numbers-minus-style = "#901011"
+    line-numbers-plus-style = "#008000"
+    hunk-header-decoration-style = white box 
+    hunk-header-line-number-style = "#FFA500"
+    hunk-header-file-style = "#FFA500"
+    syntax-theme = Monokai Extended
+    line-numbers = true
+    side-by-side = true
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[pull]
+	rebase = true
+	twohead = ort
+
+[include]
+    path = ~/.gitconfig.local
+

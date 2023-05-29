@@ -1,0 +1,52 @@
+*.p12
+*.idea
+*.zip
+.DS_Store
+.env
+.env.*
+*.iml
+.tokeignore
+*.o
+
+.AppleDouble
+.LSOverride
+
+Icon
+._*
+
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+flamegraph.svg
+
+node_modules/
+
+.vscode
+.vs/
+*.vcxproj
+*.vcxproj.*
+*.xcodeproj/
+*.dSYM
+*.stackdump
+
+## EECS 280 Specific
+*.exe
+
+## EECS 281 Specific
+fullsubmit.tar.gz
+partialsubmit.tar.gz
+ungraded.tar.gz
+*_debug
+*_profile
+
