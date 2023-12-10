@@ -7,6 +7,7 @@
 *.iml
 .tokeignore
 *.o
+__pycache__
 
 .AppleDouble
 .LSOverride

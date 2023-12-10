@@ -2,6 +2,7 @@
     forget = update-index --assume-unchanged
     unforget = update-index --no-assume-unchanged
     forgotten = ! git ls-files -v | grep ^[a-z]
+    cat = "!git show \"$1:$2\" #"
 
 [merge]
     tool = vimdiff
