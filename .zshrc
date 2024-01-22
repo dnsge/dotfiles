@@ -4,7 +4,7 @@
 ## List of tools:
 ## - bat: https://github.com/sharkdp/bat
 ## - delta: https://github.com/dandavison/delta
-## - exa: https://github.com/ogham/exa
+## - eza: https://github.com/eza-community/eza
 ## - zoxide: https://github.com/ajeetdsouza/zoxide
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -32,9 +32,9 @@ eval "$(zoxide init zsh)"
 ###################
 
 # requires exa: https://github.com/ogham/exa
-alias ls="exa --icons" 
-alias l="exa -l --icons"
-alias la="exa -la --icons"
+alias ls="eza --icons" 
+alias l="eza -l --icons"
+alias la="eza -la --icons"
 
 # make `diff` use full terminal width
 alias diff='diff -W $(tput cols)'
