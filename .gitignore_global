@@ -40,6 +40,7 @@ node_modules/
 *.xcodeproj/
 *.dSYM
 *.stackdump
+compile_commands.json
 
 *.swp
 
