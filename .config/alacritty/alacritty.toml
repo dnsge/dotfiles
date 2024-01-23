@@ -1,6 +1,7 @@
 import = [
     # Requires https://github.com/alacritty/alacritty-theme
-    "~/.config/alacritty/themes/themes/iterm.toml" 
+    "~/.config/alacritty/themes/themes/iterm.toml", 
+    "~/.config/alacritty/alacritty.local.toml"
 ]
 
 [window]
