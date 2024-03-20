@@ -2,8 +2,6 @@
 *.idea
 *.zip
 .DS_Store
-.env
-.env.*
 *.iml
 .tokeignore
 *.o
