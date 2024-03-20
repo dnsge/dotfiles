@@ -43,6 +43,7 @@ alias diff='diff -W $(tput cols)'
 alias gpom='git push origin master'
 alias gg='git grep -nr'
 alias ggi='git grep -nri'
+alias git-fix='git commit --fixup HEAD && git -c sequence.editor=: rebase -i --autostash --autosquash HEAD~2'
 
 # navigation
 alias cdback='cd $OLDPWD'

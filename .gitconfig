@@ -53,6 +53,7 @@
 [pull]
 	rebase = true
 	twohead = ort
+	autostash = true
 
 [include]
     path = ~/.gitconfig.local
