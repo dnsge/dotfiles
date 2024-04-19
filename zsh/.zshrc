@@ -48,8 +48,6 @@ alias git-fix='git commit --fixup HEAD && git -c sequence.editor=: rebase -i --a
 alias cdback='cd $OLDPWD'
 alias see='open -R'
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 # zsh
 alias zshreload="exec zsh"
 alias zshconfig="vim ~/.zshrc"
