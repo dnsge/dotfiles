@@ -1,0 +1,19 @@
+import = [
+    # Requires https://github.com/alacritty/alacritty-theme
+    "~/.config/alacritty/themes/themes/iterm.toml", 
+    "~/.config/alacritty/alacritty.local.toml"
+]
+
+[window]
+padding = { x = 0, y = 0 }
+opacity = 0.95
+resize_increments = true
+
+[font]
+# Requires https://github.com/ryanoasis/nerd-fonts/
+# $ git clone --filter=blob:none --sparse git@github.com:ryanoasis/nerd-fonts
+# $ cd nerd-fonts
+# $ git sparse-checkout add patched-fonts/JetBrainsMono
+# $ ./install.sh JetBrainsMono
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+
