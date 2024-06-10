@@ -1,3 +1,6 @@
+[user]
+    useconfigonly = true
+
 [alias]
     forget = update-index --assume-unchanged
     unforget = update-index --no-assume-unchanged
@@ -47,14 +50,15 @@
     line-numbers = true
     side-by-side = false
     navigate = true
+    tabs = 4
 
 [interactive]
     diffFilter = delta --color-only
 
 [pull]
-	rebase = true
-	twohead = ort
-	autostash = true
+    rebase = true
+    twohead = ort
+    autostash = true
 
 [include]
     path = ~/.gitconfig.local
