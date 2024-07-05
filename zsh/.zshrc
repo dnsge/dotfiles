@@ -7,11 +7,12 @@
 ## - eza: https://github.com/eza-community/eza
 ## - zoxide: https://github.com/ajeetdsouza/zoxide
 
+export PATH="/opt/homebrew/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="clear"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git docker macos sudo colored-man-pages)
+plugins=(git docker macos sudo colored-man-pages zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 
