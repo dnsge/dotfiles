@@ -21,6 +21,11 @@ STOW_MODULES=(
   "tmux"
   "vim"
   "zsh"
+  "ghostty"
+  # To add a new config: 
+  # 1. Add name here
+  # 2. Create directory with configuration, e.g. `ghostty/.config/ghostty/config`
+  # 3. Run `./ctl.sh adopt`
 )
 
 case "$1" in
