@@ -6,6 +6,7 @@
 .tokeignore
 *.o
 __pycache__
+.venv
 
 .AppleDouble
 .LSOverride
@@ -43,4 +44,6 @@ compile_commands.json
 *.swp
 
 .tokeignore
+.direnv
+.terraform
 
