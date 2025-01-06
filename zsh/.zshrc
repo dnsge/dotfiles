@@ -49,6 +49,10 @@ alias git-fix='git commit --fixup HEAD && git -c sequence.editor=: rebase -i --a
 alias cdback='cd $OLDPWD'
 alias see='open -R'
 
+# kubernetes
+alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n"
+alias k="kubectl"
+
 # zsh
 alias zshreload="exec zsh"
 alias zshconfig="vim ~/.zshrc"
