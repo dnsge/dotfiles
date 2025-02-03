@@ -40,7 +40,16 @@ alias la="eza -la --icons"
 alias diff='diff -W $(tput cols)'
 
 # git
-alias gpom='git push origin master'
+gpom() {
+  # Check if the branch is named 'master' or 'main'
+  branch=$(git symbolic-ref --short HEAD)
+  if [ "$branch" = "master" ] || [ "$branch" = "main" ]; then
+    git push origin "$branch"
+  else
+    # Handle cases where you're on a different branch or if neither 'master' nor 'main' exist
+    echo "Current branch is not 'main' or 'master'. Aborting push."
+  fi
+}
 alias gg='git grep -nr'
 alias ggi='git grep -nri'
 alias git-fix='git commit --fixup HEAD && git -c sequence.editor=: rebase -i --autostash --autosquash HEAD~2'
