@@ -3,6 +3,7 @@ theme = catppuccin-mocha
 window-padding-x = 5,0
 
 quit-after-last-window-closed = true
+window-inherit-working-directory = false
 
 macos-titlebar-style = tabs
 
