@@ -71,6 +71,10 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
+if [[ `uname` == Darwin ]]; then
+	alias uuidgen='uuidgen | tr A-F a-f'
+fi
+
 ############################
 ## Load .local zsh config ##
 ############################
