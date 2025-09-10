@@ -46,6 +46,10 @@ case "$1" in
     stow -t "$HOME" --adopt "${STOW_MODULES[@]}"
     ;;
 
+  deinit)
+    stow -t "$HOME" -D "${STOW_MODULES[@]}"
+    ;;
+
   *)
     echo "Invalid command $1"
     exit 1
