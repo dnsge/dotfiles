@@ -1,5 +1,5 @@
 font-family = JetBrainsMonoNL Nerd Font Mono
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 window-padding-x = 5,0
 
 quit-after-last-window-closed = true
