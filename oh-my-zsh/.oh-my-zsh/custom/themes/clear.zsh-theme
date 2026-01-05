@@ -16,6 +16,11 @@ cleartheme_directory() {
     echo "%{$FG[011]%}%3~%{$reset_color%}"
 }
 
+cleartheme_kctx() {
+    CTX="$(kubectl config current-context 2>/dev/null)"
+    echo "%{$FG[014]%}[$CTX]%{$reset_color%}"
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX="\u3014"
 ZSH_THEME_GIT_PROMPT_SUFFIX="\u3015"
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
@@ -27,14 +32,19 @@ vcs_prompt_info() {
 }
 
 cleartheme_git() {
-    echo "%{$FG[012]%}$(vcs_prompt_info)%{$reset_color%}"
+    VCS="$(vcs_prompt_info)"
+    if [[ -z "$VCS" ]]; then
+       echo " "
+    else
+        echo "%{$FG[012]%}$(vcs_prompt_info)%{$reset_color%}"
+    fi
 }   
 
-PROMPT='$(cleartheme_user) $(cleartheme_in_text) $(cleartheme_directory) $(cleartheme_git)$CLI_MARKER '
+PROMPT='$(cleartheme_user) $(cleartheme_in_text) $(cleartheme_directory)$(cleartheme_git)$CLI_MARKER '
 
 infinity() {
     echo "\u221E"
 }
 
-RPROMPT='%D{%T} $(infinity)'
+RPROMPT='$(cleartheme_kctx) %D{%T}'
 
