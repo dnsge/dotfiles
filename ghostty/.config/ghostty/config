@@ -2,6 +2,8 @@ font-family = JetBrainsMonoNL Nerd Font Mono
 theme = Catppuccin Mocha
 window-padding-x = 5,0
 
+scrollback-limit = 100000000
+
 quit-after-last-window-closed = true
 window-inherit-working-directory = false
 
