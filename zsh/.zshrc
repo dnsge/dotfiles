@@ -1,6 +1,6 @@
 ##
 ## Uses oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh
-## 
+##
 ## List of tools:
 ## - bat: https://github.com/sharkdp/bat
 ## - delta: https://github.com/dandavison/delta
@@ -32,7 +32,7 @@ eval "$(zoxide init zsh)"
 ## Aliases
 ###################
 
-alias ls="eza --icons" 
+alias ls="eza --icons"
 alias l="eza -l --icons"
 alias la="eza -la --icons"
 
@@ -74,6 +74,33 @@ timezsh() {
 if [[ `uname` == Darwin ]]; then
 	alias uuidgen='uuidgen | tr A-F a-f'
 fi
+
+# Decodes a JWT header and payload from stdin
+# Assumes 'jq' and 'base64' are installed
+parse_jwt () {
+    _decode_base64url () {
+        # 1. Read input into a variable
+        local input=$(cat)
+
+        # 2. Convert Base64URL to standard Base64
+        local base64_str=$(echo "$input" | tr '-' '+' | tr '_' '/')
+
+        # 3. Add padding characters (=) if necessary
+        local len=${#base64_str}
+        local pad=$(( (4 - len % 4) % 4 ))
+
+        if [ $pad -eq 1 ]; then base64_str="${base64_str}=";
+        elif [ $pad -eq 2 ]; then base64_str="${base64_str}==";
+        fi
+
+        # 4. Decode and format
+        echo "$base64_str" | base64 -d 2>/dev/null | jq .
+    }
+
+    read -r token
+    echo "$token" | cut -d'.' -f1 | _decode_base64url
+    echo "$token" | cut -d'.' -f2 | _decode_base64url
+}
 
 ############################
 ## Load .local zsh config ##
