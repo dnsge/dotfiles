@@ -10,17 +10,22 @@
 
 [merge]
     tool = vimdiff
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [mergetool]
     prompt = false
 
 [init]
     defaultBranch = master
+	templateDir = ~/.git-templates
 
 [core]
     autocrlf = input
     excludesFile = ~/.gitignore_global
+	fsmonitor = true
+	untrackedCache = true
+	commitGraph = true
+	multiPackIndex = true
 
 [pager]
     diff = delta
@@ -43,7 +48,7 @@
     line-numbers-zero-style = "#777777"
     line-numbers-minus-style = "#901011"
     line-numbers-plus-style = "#008000"
-    hunk-header-decoration-style = white box 
+    hunk-header-decoration-style = white box
     hunk-header-line-number-style = "#FFA500"
     hunk-header-file-style = "#FFA500"
     syntax-theme = Monokai Extended
@@ -56,7 +61,7 @@
     diffFilter = delta --color-only
 
 [pull]
-    rebase = true
+	rebase = true
     twohead = ort
     autostash = true
 
@@ -68,3 +73,41 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[fetch]
+	parallel = 0
+	writeCommitGraph = true
+
+[feature]
+	manyFiles = true
+
+[checkout]
+	workers = 0
+
+[gc]
+	writeCommitGraph = true
+
+[pack]
+	threads = 0
+
+[rebase]
+	updateRefs = true
+
+[diff]
+	algorithm = histogram
+
+[push]
+	autoSetupRemote = true
+	default = simple
+
+[rerere]
+	enabled = true
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
